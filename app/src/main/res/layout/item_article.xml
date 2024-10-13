@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_margin="5dp"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="5dp"
+    app:contentPadding="3dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/articleImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:layout_marginRight="5dp"
+            app:civ_border_color="#fff"
+            app:civ_border_width="1dp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/articleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Title"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/articleOverview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="@font/roboto"
+                android:maxLines="3"
+                android:minLines="2"
+                android:singleLine="false"
+                android:text="Dengan menambahkan elemen View khusus (bisa option menu, tombol, atau tab) yang mengandung ID “about_pagDengan menambahkan elemen View khusus (bisa option menu, tombol, atau tab) yang mengandung ID “about_page"
+                android:textAlignment="viewStart"
+                android:textSize="16sp" />
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

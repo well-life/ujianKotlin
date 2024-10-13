@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4CAF50"
+    tools:context=".ListDetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/articleDetailImage"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/articleDetailTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="TextView"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/articleDetailOverview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Lyodra Ginting adalah salah satu aktris yang berhasil masuk ke dalam daftar 100 wajah tercantik pada tahun 2021 dari versi TC Candler. Penyanyi ini lahir pada tanggal 21 Juni 2003 di Medan. Kemudian, ia berhasil meraih posisi paling tinggi untuk artis wanita Indonesia pada daftar 100 Most Beautiful Faces 2021." />
+
+                <TextView
+                    android:id="@+id/articleDetailDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Lyodra Ginting adalah salah satu aktris yang berhasil masuk ke dalam daftar 100 wajah tercantik pada tahun 2021 dari versi TC Candler. Penyanyi ini lahir pada tanggal 21 Juni 2003 di Medan. Kemudian, ia berhasil meraih posisi paling tinggi untuk artis wanita Indonesia pada daftar 100 Most Beautiful Faces 2021." />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnShare"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Share"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+</FrameLayout>
