@@ -29,7 +29,8 @@ class MainActivity : AppCompatActivity() {
                 .commit()
 
             supportFragmentManager.beginTransaction()
-                .replace(R.id.sideDetail, ListDetailFragment.newInstance(Article(R.drawable.chelsea,"Chelsea Islan","",""),""))
+                .replace(R.id.sideDetail, ListDetailFragment.newInstance(Article(R.drawable.chelsea,"Chelsea Islan","Tak hanya memiliki paras yang cantik, Chelsea Islan juga mempunyai segudang prestasi",
+                    "Aktris muda cantik yang berprestasi serta baru saja dilamar oleh Rob Clinton ini merupakan seorang wanita keturunan Amerika Serikat. Memiliki wajah blasteran yang begitu cantik, tidak heran jika Chelsea Islan kemudian sukses masuk sebagai salah satu nominasi perempuan tercantik versi TC Candler selama tiga tahun berturut-turut, yaitu pada tahun 2018, 2019, dan 2020."),""))
                 .commit()
         }else{
             supportFragmentManager.beginTransaction()
