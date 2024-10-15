@@ -1,5 +1,6 @@
 package com.bcaf.ujiankotlin
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.os.Parcelable
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.RequiresApi
@@ -44,6 +46,14 @@ class ListDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val shareButton = view.findViewById<Button>(R.id.btnShare)
+        shareButton.setOnClickListener {
+            if (article != null) {
+                shareArticle(article)
+            }
+        }
+
         if(article != null) {
             view.findViewById<ImageView>(R.id.articleDetailImage)
                 .setImageResource(article.imageResourceId)
@@ -51,6 +61,15 @@ class ListDetailFragment : Fragment() {
             view.findViewById<TextView>(R.id.articleDetailOverview).text = article.overview
             view.findViewById<TextView>(R.id.articleDetailDescription).text = article.description
         }
+    }
+
+    private fun shareArticle(article: Article) {
+        val shareIntent = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, "${article.title}\n${article.description}")
+            type = "text/plain"
+        }
+        startActivity(Intent.createChooser(shareIntent, "Share using"))
     }
 
     companion object {

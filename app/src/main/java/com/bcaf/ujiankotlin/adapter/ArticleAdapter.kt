@@ -23,10 +23,7 @@ class ArticleAdapter(private val articles: List<Article>, private val clickListe
 
             // Handling item click
             itemView.setOnClickListener {
-                val context = itemView.context
-                val intent = Intent(context, DetailActivity::class.java)
-                intent.putExtra("ARTICLE", article)
-                context.startActivity(intent)
+                clickListener(article)
             }
         }
     }
